@@ -1,72 +1,25 @@
+@value makerWhite, makerGreen, makerLightPink from '../../common/colors.css';
+
 * {
   box-sizing: border-box;
 }
 
-.modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.modal_overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-.content {
-  position: absolute;
+.login {
+  width: 30em;
   display: flex;
   flex-direction: column;
+  background-color: makerWhite;
+  text-align: center;
 }
 
-.header,
-.footer {
-  background-color: #3f708d;
-}
-
-.loginPage {
-  background-color: white;
-}
-
-.header {
+.list {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 0.5em 10em;
+  padding: 0.5em;
+  list-style: none;
 }
 
-.header img {
-  width: 90px;
-  height: 70px;
-}
-
-.headerTitle {
-  font-size: 2rem;
-  color: white;
-  font-weight: bold;
-}
-
-.loginPage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1.5em 0.5em;
-}
-
-.loginTitle {
-  font-size: 2rem;
-  font-weight: bold;
-  padding-bottom: 0.5em;
-}
-
-.loginBtn {
+.button {
   width: 100%;
   margin-top: 0.5em;
   outline: none;
@@ -78,9 +31,6 @@
   cursor: pointer;
 }
 
-.footer {
-  text-align: center;
-  font-size: 1.3rem;
-  color: white;
-  padding: 1em;
+.button:hover {
+  background-color: makerLightPink;
 }

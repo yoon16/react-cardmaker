@@ -1,27 +1,34 @@
 import React from "react";
+import Footer from "../footer/footer";
+import Header from "../header/header";
 import styles from "./login.module.css";
 
-const Login = (props) => {
+const Login = ({ authService }) => {
+  const onLogin = (event) => {
+    authService
+      .login(event.currentTarget.textContent) //
+      .then(console.log);
+  };
   return (
-    <>
-      <div className={styles.modal}>
-        <div className={styles.modal_overlay}></div>
-        <div className={styles.content}>
-          <header className={styles.header}>
-            <img src="../../../images/logo.png" alt="logo" />
-            <span className={styles.headerTitle}>Business Card Maker</span>
-          </header>
-          <section className={styles.loginPage}>
-            <span className={styles.loginTitle}>Login</span>
-            <button className={styles.loginBtn}>Google</button>
-            <button className={styles.loginBtn}>Github</button>
-          </section>
-          <footer className={styles.footer}>
-            <span>Code your dream</span>
-          </footer>
-        </div>
-      </div>
-    </>
+    <section className={styles.login}>
+      <Header />
+      <section>
+        <h1>Login</h1>
+        <ul className={styles.list}>
+          <li className={styles.item}>
+            <button className={styles.button} onClick={onLogin}>
+              Google
+            </button>
+          </li>
+          <li className={styles.item}>
+            <button className={styles.button} onClick={onLogin}>
+              Github
+            </button>
+          </li>
+        </ul>
+      </section>
+      <Footer />
+    </section>
   );
 };
 
