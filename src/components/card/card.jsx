@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./card.module.css";
+
 const DEFAULT_IMAGE = "/images/default_logo.png";
 
 const Card = ({ card }) => {
@@ -13,9 +14,7 @@ const Card = ({ card }) => {
     fileName,
     fileURL,
   } = card;
-
   const url = fileURL || DEFAULT_IMAGE;
-
   return (
     <li className={`${styles.card} ${getStyles(theme)}`}>
       <img className={styles.avatar} src={url} alt="profile photo" />
@@ -39,7 +38,7 @@ function getStyles(theme) {
     case "colorful":
       return styles.colorful;
     default:
-      throw new Error(`unknow theme: ${theme}`);
+      throw new Error(`unknown theme: ${theme}`);
   }
 }
 
