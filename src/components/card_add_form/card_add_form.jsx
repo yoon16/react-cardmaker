@@ -37,6 +37,7 @@ const CardAddForm = ({ FileInput, onAdd }) => {
     setFile({ fileName: null, fileURL: null });
     onAdd(card);
   };
+
   return (
     <form ref={formRef} className={styles.form}>
       <input
